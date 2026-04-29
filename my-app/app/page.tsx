@@ -57,33 +57,22 @@ export default function App() {
         </>
       )}
 
-      {page === "result" && result && (
+      {page === "result" && result ? (
         <>
           <h1>抽選結果</h1>
+
           <pre style={{ textAlign: "left", display: "inline-block" }}>
-            { JSON.stringify(result, null, 2) }
+            {JSON.stringify(result, null, 2)}
           </pre>
-          <p>{result.member}の動画を見るとハッピーかも！？</p>
-          <p>埋め込みURL: {result.movie}</p>
-          <p>画像: {result.photo}</p>
-          {/* <img
-            src={`/photos/${result.photo}`}
-            alt={result.member}
-            style={{ width: "200px", borderRadius: "8px", marginTop: "20px" }}
-          /> */}
-          {/* <div style={{ marginTop: "20px" }}>
-            <iframe
-              width="360"
-              height="215"
-              src={toEmbedUrl(result.movie)}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div> */}
+
+          <p>{result?.member} の動画を見るとハッピーかも！？</p>
+          <p>埋め込みURL: {result?.movie}</p>
+          <p>画像: {result?.photo}</p>
         </>
+      ) : (
+        <p>結果を読み込み中...</p>
       )}
+      
     </div>
   );
 }
