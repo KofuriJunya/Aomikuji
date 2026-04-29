@@ -55,9 +55,9 @@ export default function App() {
           <pre style={{ textAlign: "left", display: "inline-block" }}>
             { JSON.stringify(result, null, 2) }
           </pre>
-          <p>{result.member} の動画を見るとハッピーかも！？</p>
+          <p>{result.member}の動画を見るとハッピーかも！？</p>
 
-          {/* YouTube 埋め込み
+          {/* YouTube 埋め込み*/
           <div style={{ marginTop: "20px" }}>
             {(() => {
               const url = result.movie;
@@ -76,7 +76,7 @@ export default function App() {
                 ></iframe>
               );
             })()}
-          </div> */}
+          </div>}
         </>
       )}
     </div>
