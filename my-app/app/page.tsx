@@ -6,20 +6,23 @@ export default function App() {
   const [page, setPage] = useState("start");
   const [result, setResult] = useState<any>(null);
 
-  // 抽選開始 → GAS へ fetch → 結果画面へ
   const startLottery = async () => {
     setPage("animation");
 
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3000); // 3秒で強制中断
+
     try {
-      const res = await fetch("/api/lottery");
+      const res = await fetch("/api/lottery", { signal: controller.signal });
+      clearTimeout(timeout);
+
       const data = await res.json();
       setResult(data);
     } catch (err) {
-      console.error
+      console.error("fetch エラー:", err);
       setResult({ error: "GAS との通信に失敗しました" });
     }
 
-    // 2秒後に結果画面へ
     setTimeout(() => {
       setPage("result");
     }, 2000);
