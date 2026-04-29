@@ -1,3 +1,8 @@
 export async function GET() {
-  return Response.json({ message: "ok" });
+  const gasUrl = process.env.GAS_URL;
+
+  const res = await fetch(gasUrl);
+  const data = await res.json();
+
+  return Response.json(data);
 }
