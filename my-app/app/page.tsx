@@ -64,7 +64,7 @@ export default function App() {
           </pre>
           <p>{result.member}の動画を見るとハッピーかも！？</p>
 
-          <div style={{ marginTop: "20px" }}>
+          {/* <div style={{ marginTop: "20px" }}>
             <iframe
               width="360"
               height="215"
@@ -74,7 +74,8 @@ export default function App() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
+          <p>埋め込みURL: {toEmbedUrl(result.movie)}</p>
         </>
       )}
     </div>
