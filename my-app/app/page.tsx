@@ -52,7 +52,9 @@ export default function App() {
       {page === "result" && result && (
         <>
           <h1>抽選結果</h1>
-
+          <pre style={{ textAlign: "left", display: "inline-block" }}>
+            { JSON.stringify(result, null, 2) }
+          </pre>
           <p>{result.member} の動画を見るとハッピーかも！？</p>
 
           {/* YouTube 埋め込み
