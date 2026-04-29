@@ -65,14 +65,32 @@ export default function App() {
             {JSON.stringify(result, null, 2)}
           </pre>
 
+          {/* 文言 */}
           <p>{result?.member} の動画を見るとハッピーかも！？</p>
+
+          {/* テスト領域 */}
           <p>埋め込みURL: {result?.movie}</p>
           <p>画像: {result?.photo}</p>
+
+          {/* 画像 */}
           <img
             src={`/photos/${result?.photo}`}
             alt={result?.member}
             style={{ width: "200px", borderRadius: "8px", marginTop: "20px" }}
           />
+
+          {/* 動画 */}
+          <div style={{ marginTop: "20px" }}>
+            <iframe
+              width="360"
+              height="215"
+              src={toEmbedUrl(result.movie)}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </>
       ) : (
         <p>結果を読み込み中...</p>
