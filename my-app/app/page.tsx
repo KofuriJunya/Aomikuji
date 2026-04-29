@@ -71,7 +71,7 @@ export default function App() {
             alt={result.member}
             style={{ width: "200px", borderRadius: "8px", marginTop: "20px" }}
           /> */}
-          <div style={{ marginTop: "20px" }}>
+          {/* <div style={{ marginTop: "20px" }}>
             <iframe
               width="360"
               height="215"
@@ -81,7 +81,7 @@ export default function App() {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-          </div>
+          </div> */}
         </>
       )}
     </div>
