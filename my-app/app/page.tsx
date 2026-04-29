@@ -56,6 +56,25 @@ export default function App() {
           <pre style={{ textAlign: "left", display: "inline-block" }}>
             { JSON.stringify(result, null, 2) }
           </pre>
+
+          {/* メッセージ */}
+          <p>
+            {result.member} の動画を見るとハッピーかも！？
+          </p>
+
+          {/* YouTube 埋め込み */}
+          <div style={{ marginTop: "20px" }}>
+            <iframe
+              width="360"
+              height="215"
+              src={result.movie.replace("youtu.be/", "www.youtube.com/embed/")}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+
         </>
       )}
     </div>
