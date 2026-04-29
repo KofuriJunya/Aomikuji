@@ -63,6 +63,7 @@ export default function App() {
             { JSON.stringify(result, null, 2) }
           </pre>
           <p>{result.member}の動画を見るとハッピーかも！？</p>
+          <p>埋め込みURL: {result.movie}</p>
         </>
       )}
     </div>
