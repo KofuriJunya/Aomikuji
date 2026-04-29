@@ -54,7 +54,7 @@ export default function App() {
           <h1>抽選結果</h1>
           <p>ここに結果が表示されます</p>
           <pre style={{ textAlign: "left", display: "inline-block" }}>
-            {JSON.stringify(result, null, 2)}
+            { JSON.stringify(result, null, 2) }
           </pre>
         </>
       )}
