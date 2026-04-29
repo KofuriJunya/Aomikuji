@@ -33,7 +33,7 @@ export default function App() {
 
     setTimeout(() => {
       setPage("result");
-    }, 2000);
+    }, 5000);
   };
 
   return (
@@ -65,7 +65,7 @@ export default function App() {
           </pre>
           <p>{result.member}の動画を見るとハッピーかも！？</p>
           <p>埋め込みURL: {result.movie}</p>
-          {/* 画像表示 */}
+          <p>画像: {result.photo}</p>
           <img
             src={`/photos/${result.photo}`}
             alt={result.member}
