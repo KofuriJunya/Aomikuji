@@ -31,6 +31,9 @@ export default function App() {
       setResult({ error: "GAS との通信に失敗しました" });
     }
 
+    setTimeout(() => {
+      setPage("result");
+    }, 10000);
   };
 
   return (
