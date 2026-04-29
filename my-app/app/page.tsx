@@ -7,11 +7,12 @@ export default function App() {
   const [result, setResult] = useState<any>(null);
 
 
-  // function toEmbedUrl(url: string) {
-  //   // youtu.be/xxxx の後ろを取り出す
-  //   const id = url.split("youtu.be/")[1].split("?")[0];
-  //   return `https://www.youtube.com/embed/${id}`;
-  // }
+  function toEmbedUrl(url: string) {
+    // youtu.be/xxxx の後ろを取り出す
+    const id = url.split("youtu.be/")[1].split("?")[0];
+    console.info(`https://www.youtube.com/embed/${id}`);
+    return `https://www.youtube.com/embed/${id}`;
+  }
 
   const startLottery = async () => {
     setPage("animation");
@@ -64,6 +65,17 @@ export default function App() {
           </pre>
           <p>{result.member}の動画を見るとハッピーかも！？</p>
           <p>埋め込みURL: {result.movie}</p>
+          <div style={{ marginTop: "20px" }}>
+            <iframe
+              width="360"
+              height="215"
+              src={toEmbedUrl(result.movie)}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </>
       )}
     </div>
