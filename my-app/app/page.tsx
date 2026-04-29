@@ -34,7 +34,7 @@ export default function App() {
         <>
           <h1>初期画面</h1>
           <button
-            onClick={() => setPage("animation")}
+            onClick={startLottery}
             style={{ padding: "10px 20px", fontSize: "18px" }}
           >
             占う
