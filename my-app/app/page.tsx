@@ -68,6 +68,11 @@ export default function App() {
           <p>{result?.member} の動画を見るとハッピーかも！？</p>
           <p>埋め込みURL: {result?.movie}</p>
           <p>画像: {result?.photo}</p>
+          <img
+            src={`/photos/${result?.photo}`}
+            alt={result?.member}
+            style={{ width: "200px", borderRadius: "8px", marginTop: "20px" }}
+          />
         </>
       ) : (
         <p>結果を読み込み中...</p>
