@@ -18,7 +18,7 @@ export default function App() {
     setPage("animation");
 
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 3000); // 3秒で強制中断
+    const timeout = setTimeout(() => controller.abort(), 10000); // 10秒で強制中断
 
     try {
       const res = await fetch("/api/lottery", { signal: controller.signal });
@@ -31,9 +31,6 @@ export default function App() {
       setResult({ error: "GAS との通信に失敗しました" });
     }
 
-    setTimeout(() => {
-      setPage("result");
-    }, 5000);
   };
 
   return (
