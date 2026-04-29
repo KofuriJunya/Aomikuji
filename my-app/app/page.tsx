@@ -55,7 +55,7 @@ export default function App() {
 
           <p>{result.member} の動画を見るとハッピーかも！？</p>
 
-          {/* YouTube 埋め込み */}
+          {/* YouTube 埋め込み
           <div style={{ marginTop: "20px" }}>
             {(() => {
               const url = result.movie;
@@ -74,7 +74,7 @@ export default function App() {
                 ></iframe>
               );
             })()}
-          </div>
+          </div> */}
         </>
       )}
     </div>
