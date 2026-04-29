@@ -65,6 +65,12 @@ export default function App() {
           </pre>
           <p>{result.member}の動画を見るとハッピーかも！？</p>
           <p>埋め込みURL: {result.movie}</p>
+          {/* 画像表示 */}
+          <img
+            src={`/photos/${result.photo}`}
+            alt={result.member}
+            style={{ width: "200px", borderRadius: "8px", marginTop: "20px" }}
+          />
           <div style={{ marginTop: "20px" }}>
             <iframe
               width="360"
