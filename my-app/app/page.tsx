@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function App() {
   const [page, setPage] = useState("start");
-　const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<any>(null);
 
   // 抽選開始 → GAS へ fetch → 結果画面へ
   const startLottery = async () => {
@@ -13,9 +13,9 @@ export default function App() {
     try {
       const res = await fetch("/api/lottery");
       const data = await res.json();
-
       setResult(data);
     } catch (err) {
+      console.error
       setResult({ error: "GAS との通信に失敗しました" });
     }
 
