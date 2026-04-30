@@ -43,3 +43,10 @@
   overflow: hidden;        /* ← はみ出し防止 */
   text-align: center;      /* ← テキスト中央寄せ */
 }
+
+.content-wrapper {
+  width: 100%;
+  max-width: 480px; /* ← 中身の幅を広げるポイント */
+  margin: 0 auto;
+  text-align: center;
+}

@@ -58,7 +58,7 @@ export default function App() {
       )}
 
       {page === "result" && result && (
-        <>
+        <div className="content-wrapper">
           <h1>抽選結果</h1>
 
           {/* テスト領域 */}
@@ -80,18 +80,16 @@ export default function App() {
           />
 
           {/* 動画 */}
-          <div style={{ marginTop: "20px" }}>
-            <iframe
-              style={{ width: "100%", maxWidth: "360px", borderRadius: "8px" }}
-              height="215"
-              src={result?.movie ? toEmbedUrl(result.movie) : ""}
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </>
+          <iframe
+            style={{ width: "100%", maxWidth: "360px", borderRadius: "8px" }}
+            height="215"
+            src={result?.movie ? toEmbedUrl(result.movie) : ""}
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
       )}
       
     </div>
