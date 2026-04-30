@@ -37,7 +37,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
+    <div style={{ textAlign: "center" }}>
       {page === "start" && (
         <>
           <h1>初期画面</h1>
