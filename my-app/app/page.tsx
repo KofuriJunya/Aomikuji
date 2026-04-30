@@ -37,61 +37,64 @@ export default function App() {
   };
 
   return (
-    <div style={{ textAlign: "center" }}>
-      {page === "start" && (
-        <>
-          <h1>初期画面</h1>
-          <button
-            onClick={startLottery}
-            style={{ padding: "10px 20px", fontSize: "18px" }}
-          >
-            占う
-          </button>
-        </>
-      )}
+    <div className="app-container">
+      <div className="content-wrapper">
+        <div style={{ textAlign: "center" , width: "100%" }}>
+          {page === "start" && (
+            <>
+              <h1>初期画面</h1>
+              <button
+                onClick={startLottery}
+                style={{ padding: "10px 20px", fontSize: "18px" }}
+              >
+                占う
+              </button>
+            </>
+          )}
 
-      {page === "animation" && (
-        <>
-          <h1>抽選画面</h1>
-          <p>抽選中…</p>
-        </>
-      )}
+          {page === "animation" && (
+            <>
+              <h1>抽選画面</h1>
+              <p>抽選中…</p>
+            </>
+          )}
 
-      {page === "result" && result && (
-        <div className="content-wrapper">
-          <h1>抽選結果</h1>
+          {page === "result" && result && (
+            <>
+              <h1>抽選結果</h1>
 
-          {/* テスト領域 */}
-          {/* <p>埋め込みURL: {result?.movie}</p>
+              {/* テスト領域 */}
+              {/* <p>埋め込みURL: {result?.movie}</p>
           <p>画像: {result?.photo}</p>
           <pre style={{ textAlign: "left", display: "inline-block" }}>
             {JSON.stringify(result, null, 2)}
           </pre> */}
 
-          {/* 文言 */}
-          <p>本日のラッキーな星座は{result?.constellation}です！</p>
-          <p>{result?.member}の動画を見るとハッピーかも！？</p>
+              {/* 文言 */}
+              <p>本日のラッキーな星座は{result?.constellation}です！</p>
+              <p>{result?.member}の動画を見るとハッピーかも！？</p>
 
-          {/* 画像 */}
-          <img
-            src={`/photos/${result?.photo}`}
-            alt={result?.member}
-            style={{ width: "200px", borderRadius: "8px", marginTop: "20px", display: "block", marginLeft: "auto", marginRight: "auto" }}
-          />
+              {/* 画像 */}
+              <img
+                src={`/photos/${result?.photo}`}
+                alt={result?.member}
+                style={{ width: "200px", borderRadius: "8px", marginTop: "20px", display: "block", marginLeft: "auto", marginRight: "auto" }}
+              />
 
-          {/* 動画 */}
-          <iframe
-            style={{ width: "100%", maxWidth: "480px", borderRadius: "8px", marginTop: "20px" }}
-            height="215"
-            src={result?.movie ? toEmbedUrl(result.movie) : ""}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+              {/* 動画 */}
+              <iframe
+                style={{ width: "100%", maxWidth: "480px", borderRadius: "8px", marginTop: "20px" }}
+                height="215"
+                src={result?.movie ? toEmbedUrl(result.movie) : ""}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </>
+          )}
         </div>
-      )}
-      
+      </div>
     </div>
-  );
+  )
 }
