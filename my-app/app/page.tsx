@@ -37,7 +37,7 @@ export default function App() {
   };
 
   return (
-    <div style={{ padding: "40px", textAlign: "center" }}>
+    <div style={{ padding: "20px", textAlign: "center" }}>
       {page === "start" && (
         <>
           <h1>初期画面</h1>
@@ -80,15 +80,17 @@ export default function App() {
           />
 
           {/* 動画 */}
-          <iframe
-            style={{ width: "100%", maxWidth: "360px", borderRadius: "8px" }}
-            height="215"
-            src={result?.movie ? toEmbedUrl(result.movie) : ""}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+          <div style={{ marginTop: "20px" }}>
+            <iframe
+              style={{ width: "100%", maxWidth: "360px", borderRadius: "8px" }}
+              height="215"
+              src={result?.movie ? toEmbedUrl(result.movie) : ""}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       )}
       
