@@ -57,7 +57,7 @@ export default function App() {
         </>
       )}
 
-      {page === "result" && result ? (
+      {page === "result" && result && (
         <>
           <h1>抽選結果</h1>
 
@@ -66,11 +66,12 @@ export default function App() {
           </pre>
 
           {/* 文言 */}
-          <p>{result?.member} の動画を見るとハッピーかも！？</p>
+          <p>本日のラッキーな星座は{result?.constellation}です！</p>
+          <p>{result?.member}の動画を見るとハッピーかも！？</p>
 
           {/* テスト領域 */}
-          <p>埋め込みURL: {result?.movie}</p>
-          <p>画像: {result?.photo}</p>
+          {/* <p>埋め込みURL: {result?.movie}</p>
+          <p>画像: {result?.photo}</p> */}
 
           {/* 画像 */}
           <img
@@ -84,7 +85,7 @@ export default function App() {
             <iframe
               width="360"
               height="215"
-              src={toEmbedUrl(result.movie)}
+              src={result?.movie ? toEmbedUrl(result.movie) : ""}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -92,8 +93,6 @@ export default function App() {
             ></iframe>
           </div>
         </>
-      ) : (
-        <p>結果を読み込み中...</p>
       )}
       
     </div>
