@@ -2,7 +2,7 @@
 
 /* 200x200 の画像をタイル状に敷き詰める */
 .bg {
-  background-image: url("/pattern/bg-tile.png"); /* ← 200x200 の画像 */
+  background-image: url("/patterns/bg-tile.png"); /* ← 200x200 の画像 */
   background-repeat: repeat;
   background-size: 200px 200px;
   min-height: 100vh;
