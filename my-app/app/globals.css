@@ -29,7 +29,7 @@
 .app-container {
   width: 100%;
   max-width: 440px;
-  height: 600px;
+  height: 600px; /* Web版の固定高さ */
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -37,9 +37,9 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* ← 中央寄せ */
-  align-items: center;     /* ← 中央寄せ */
+  justify-content: center; /* ← 縦方向の中央寄せ */
+  align-items: center;     /* ← 横方向の中央寄せ */
 
   overflow: hidden;        /* ← はみ出し防止 */
-  text-overflow: ellipsis; /* ← 長文の省略 */
+  text-align: center;      /* ← テキスト中央寄せ */
 }

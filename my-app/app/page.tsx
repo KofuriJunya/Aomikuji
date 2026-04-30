@@ -83,7 +83,7 @@ export default function App() {
           {/* 動画 */}
           <div style={{ marginTop: "20px" }}>
             <iframe
-              width="360"
+              style={{ width: "100%", maxWidth: "360px", borderRadius: "8px" }}
               height="215"
               src={result?.movie ? toEmbedUrl(result.movie) : ""}
               title="YouTube video player"
