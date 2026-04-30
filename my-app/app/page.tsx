@@ -61,23 +61,22 @@ export default function App() {
         <>
           <h1>抽選結果</h1>
 
+          {/* テスト領域 */}
+          {/* <p>埋め込みURL: {result?.movie}</p>
+          <p>画像: {result?.photo}</p>
           <pre style={{ textAlign: "left", display: "inline-block" }}>
             {JSON.stringify(result, null, 2)}
-          </pre>
+          </pre> */}
 
           {/* 文言 */}
           <p>本日のラッキーな星座は{result?.constellation}です！</p>
           <p>{result?.member}の動画を見るとハッピーかも！？</p>
 
-          {/* テスト領域 */}
-          {/* <p>埋め込みURL: {result?.movie}</p>
-          <p>画像: {result?.photo}</p> */}
-
           {/* 画像 */}
           <img
             src={`/photos/${result?.photo}`}
             alt={result?.member}
-            style={{ width: "200px", borderRadius: "8px", marginTop: "20px" }}
+            style={{ width: "200px", borderRadius: "8px", marginTop: "20px", display: "block", marginLeft: "auto", marginRight: "auto" }}
           />
 
           {/* 動画 */}

@@ -29,7 +29,7 @@
 .app-container {
   width: 100%;
   max-width: 440px;
-  height: 600px; /* Web版の固定高さ */
+  height: 640px;
   background: white;
   padding: 20px;
   border-radius: 12px;
