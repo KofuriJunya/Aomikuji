@@ -59,7 +59,7 @@ export default function App() {
 
       {page === "result" && result && (
         <>
-          <div style={{ marginBottom: "20px" }}>
+          <div style={{ marginBottom: "20px", display: "flex" }}>
             <button
               onClick={() => setPage("start")}
               style={{
