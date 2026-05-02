@@ -59,23 +59,22 @@ export default function App() {
 
       {page === "result" && result && (
         <>
-          <button
-            onClick={() => setPage("start")}
-            style={{
-              position: "absolute",
-              top: "20px",
-              left: "20px",
-              padding: "8px 16px",
-              fontSize: "16px",
-              backgroundColor: "#007bff",
-              color: "white",
-              border: "none",
-              borderRadius: "4px",
-              cursor: "pointer"
-            }}
-          >
-            戻る
-          </button>
+          <div style={{ marginBottom: "20px" }}>
+            <button
+              onClick={() => setPage("start")}
+              style={{
+                padding: "8px 16px",
+                fontSize: "16px",
+                backgroundColor: "#007bff",
+                color: "white",
+                border: "none",
+                borderRadius: "4px",
+                cursor: "pointer"
+              }}
+            >
+              戻る
+            </button>
+          </div>
 
           <h1>今日の運勢</h1>
 
