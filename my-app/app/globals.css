@@ -26,6 +26,7 @@
   padding: 0;
 }
 
+/* ===== スマホ対応（768px未満） ===== */
 .app-container {
   width: 100%;
   max-width: 480px;
@@ -49,4 +50,14 @@
   max-width: 480px; /* ← 中身の幅を広げるポイント */
   margin: 0 auto;
   text-align: center;
+}
+
+/* ===== PC対応（769px以上） ===== */
+@media (min-width: 769px) {
+  .app-container {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 40px;
+  }
 }
