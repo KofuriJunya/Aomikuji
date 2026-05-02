@@ -29,7 +29,11 @@ export default function RootLayout({
 
         <main className="main">
           <div className="app-container">
-            {children}
+            <div className="content-wrapper">
+              <div style={{ textAlign: "center" , width: "100%" }}>
+                {children}
+              </div>
+            </div>
           </div>
         </main>
 
