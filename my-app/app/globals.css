@@ -40,9 +40,8 @@
 
 /* ===== 共通初期値 ===== */
 .app-container {
-  width: 100%;
-  max-width: 520px;
-  max-height: 720px;
+  width: 520px;
+  height: 720px;
   background: white;
   padding: 20px;
   border-radius: 12px;
