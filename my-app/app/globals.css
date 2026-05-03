@@ -57,26 +57,6 @@
   text-align: center;      /* ← テキスト中央寄せ */
 }
 
-/* ===== 中サイズデバイス（768px - 1024px） ===== */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .app-container {
-    width: 100%;
-    max-width: 500px;
-    min-height: 680px;
-    padding: 20px;
-  }
-}
-
-/* ===== 大サイズデバイス（1025px以上） ===== */
-@media (min-width: 1025px) {
-  .app-container {
-    width: 100%;
-    max-width: 520px;
-    min-height: 720px;
-    padding: 20px;
-  }
-}
-
 /* ===== 動画スタイル ===== */
 .video-iframe {
   width: 100%;
@@ -87,27 +67,53 @@
   border: none;
 }
 
-@media (min-width: 768px) {
-  .video-iframe {
-    max-width: 480px;
-    height: 270px;
-  }
+.ios .video-iframe {
+  max-width: 320px;
+  height: 180px;
 }
+
+.android .video-iframe {
+  max-width: 320px;
+  height: 180px;
+}
+
 /* ===== OS別スタイル ===== */
 /* Android 専用 */
 .android .app-container {
-  max-width: 450px;
-  min-height: 620px;
+  max-width: 350px;
+  min-height: 480px;
 }
 
 /* iOS 専用 */
 .ios .app-container {
-  max-width: 460px;
-  min-height: 630px;
+  max-width: 350px;
+  min-height: 480px;
 }
 
 /* PC 専用 */
 .desktop .app-container {
   max-width: 520px;
   min-height: 720px;
+}
+
+/* ===== OS別ヘッダ／フッタ ===== */
+.android .header {
+  height: 20px;
+}
+.android .footer {
+  height: 20px;
+}
+
+.ios .header {
+  height: 20px;
+}
+.ios .footer {
+  height: 20px;
+}
+
+.desktop .header {
+  height: 80px;
+}
+.desktop .footer {
+  height: 80px;
 }
