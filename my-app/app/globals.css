@@ -42,7 +42,7 @@
 .app-container {
   width: 100%;
   max-width: 480px;
-  max-height: 640px;
+  min-height: 640px;
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -62,7 +62,7 @@
   .app-container {
     width: 100%;
     max-width: 500px;
-    max-height: 680px;
+    min-height: 680px;
     padding: 20px;
   }
 }
@@ -72,7 +72,7 @@
   .app-container {
     width: 100%;
     max-width: 520px;
-    max-height: 720px;
+    min-height: 720px;
     padding: 20px;
   }
 }
@@ -97,17 +97,17 @@
 /* Android 専用 */
 .android .app-container {
   max-width: 450px;
-  max-height: 620px;
+  min-height: 620px;
 }
 
 /* iOS 専用 */
 .ios .app-container {
   max-width: 460px;
-  max-height: 630px;
+  min-height: 630px;
 }
 
 /* PC 専用 */
 .desktop .app-container {
   max-width: 520px;
-  max-height: 720px;
+  min-height: 720px;
 }
