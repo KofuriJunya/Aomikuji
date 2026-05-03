@@ -40,8 +40,9 @@
 
 /* ===== 共通初期値 ===== */
 .app-container {
-  width: 520px;
-  height: 720px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 640px;
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -54,4 +55,41 @@
 
   overflow: hidden;        /* ← はみ出し防止 */
   text-align: center;      /* ← テキスト中央寄せ */
+}
+
+/* ===== 中サイズデバイス（768px - 1024px） ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app-container {
+    width: 100%;
+    max-width: 500px;
+    max-height: 680px;
+    padding: 25px;
+  }
+}
+
+/* ===== 大サイズデバイス（1025px以上） ===== */
+@media (min-width: 1025px) {
+  .app-container {
+    width: 100%;
+    max-width: 520px;
+    max-height: 720px;
+    padding: 30px;
+  }
+}
+
+/* ===== 動画スタイル ===== */
+.video-iframe {
+  width: 100%;
+  max-width: 480px;
+  height: 270px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .video-iframe {
+    max-width: 600px;
+    height: 338px;
+  }
 }
