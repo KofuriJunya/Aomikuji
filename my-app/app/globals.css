@@ -26,7 +26,15 @@
   padding: 0;
 }
 
-/* ===== スマホ対応（768px未満） ===== */
+/* コンテンツのラッパー */
+.content-wrapper {
+  width: 100%;
+  max-width: 480px; /* ← 中身の幅を広げるポイント */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== スマホ対応（767px未満） ===== */
 .app-container {
   width: 100%;
   max-width: 480px;
@@ -45,19 +53,22 @@
   text-align: center;      /* ← テキスト中央寄せ */
 }
 
-.content-wrapper {
-  width: 100%;
-  max-width: 480px; /* ← 中身の幅を広げるポイント */
-  margin: 0 auto;
-  text-align: center;
+/* ===== 中サイズデバイス（768px - 1024px） ===== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .app-container {
+    width: 100%;
+    max-width: 600px;
+    height: 720px;
+    padding: 30px;
+  }
 }
 
-/* ===== PC対応（769px以上） ===== */
-@media (min-width: 769px) {
+/* ===== 大サイズデバイス（1025px以上） ===== */
+@media (min-width: 1025px) {
   .app-container {
     width: 100%;
     max-width: 800px;
-    height: auto;
+    height: 800px; 
     padding: 40px;
   }
 }
