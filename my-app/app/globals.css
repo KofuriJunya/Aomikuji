@@ -102,6 +102,7 @@ body {
 }
 .android .app-container {
   max-width: 350px;
+  padding: calc((var(--max-width) - 320px) / 2);  /* 動画分引いて差分をpadding */
 }
 /* .android.screen-small .app-container {
   max-width: 320px;
@@ -120,6 +121,7 @@ body {
 }
 .ios .app-container {
   max-width: 350px;
+  padding: calc((var(--max-width) - 320px) / 2);  /* 動画分引いて差分をpadding */
 }
 /* .ios.screen-small .app-container {
   max-width: 330px;
@@ -138,6 +140,7 @@ body {
 }
 .desktop .app-container {
   max-width: 540px;
+  padding: calc((var(--max-width) - 480px) / 2);  /* 動画分引いて差分をpadding */
 }
 
 /* ===== OS別ヘッダ／フッタ ===== */
