@@ -81,6 +81,7 @@ body {
   height: 270px;
   border-radius: 8px;
   margin-top: 20px;
+  margin-bottom: 20px;
   border: none;
 }
 
@@ -102,7 +103,7 @@ body {
 .android .app-container {
   max-width: 350px;
 }
-.android.screen-small .app-container {
+/* .android.screen-small .app-container {
   max-width: 320px;
 }
 .android.screen-medium .app-container {
@@ -110,7 +111,7 @@ body {
 }
 .android.screen-large .app-container {
   max-width: 450px;
-}
+} */
 
 /* iOS 専用 */
 .ios {
@@ -120,7 +121,7 @@ body {
 .ios .app-container {
   max-width: 350px;
 }
-.ios.screen-small .app-container {
+/* .ios.screen-small .app-container {
   max-width: 330px;
 }
 .ios.screen-medium .app-container {
@@ -128,7 +129,7 @@ body {
 }
 .ios.screen-large .app-container {
   max-width: 460px;
-}
+} */
 
 /* PC 専用 */
 .desktop {
@@ -136,7 +137,7 @@ body {
   --footer-height: 80px;
 }
 .desktop .app-container {
-  max-width: 520px;
+  max-width: 540px;
 }
 
 /* ===== OS別ヘッダ／フッタ ===== */
