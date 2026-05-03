@@ -6,6 +6,18 @@ export default function App() {
   const [page, setPage] = useState("start");
   const [result, setResult] = useState<any>(null);
 
+  useEffect(() => {
+    const ua = navigator.userAgent;
+    let osClass = "desktop";
+    
+    if (/Android/i.test(ua)) {
+      osClass = "android";
+    } else if (/iPhone|iPad|iPod/i.test(ua)) {
+      osClass = "ios";
+    }
+    
+    document.body.classList.add(osClass);
+  }, []);
 
   function toEmbedUrl(url: string) {
     // youtu.be/xxxx の後ろを取り出す

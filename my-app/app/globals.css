@@ -63,7 +63,7 @@
     width: 100%;
     max-width: 500px;
     max-height: 680px;
-    padding: 25px;
+    padding: 20px;
   }
 }
 
@@ -73,7 +73,7 @@
     width: 100%;
     max-width: 520px;
     max-height: 720px;
-    padding: 30px;
+    padding: 20px;
   }
 }
 
@@ -89,7 +89,25 @@
 
 @media (min-width: 768px) {
   .video-iframe {
-    max-width: 600px;
-    height: 338px;
+    max-width: 480px;
+    height: 270px;
   }
+}
+/* ===== OS別スタイル ===== */
+/* Android 専用 */
+.android .app-container {
+  max-width: 450px;
+  max-height: 620px;
+}
+
+/* iOS 専用 */
+.ios .app-container {
+  max-width: 460px;
+  max-height: 630px;
+}
+
+/* PC 専用 */
+.desktop .app-container {
+  max-width: 520px;
+  max-height: 720px;
 }
