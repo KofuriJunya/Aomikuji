@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+:root {
+  --header-height: 80px;
+  --footer-height: 80px;
+}
+
 /* 200x200 の画像をタイル状に敷き詰める */
 .bg {
   background-image: url("/patterns/bg-tile.png"); /* ← 200x200 の画像 */
@@ -10,19 +15,28 @@
   padding: 0;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
 /* ヘッダ・フッタは余白だけ確保 */
 .header {
-  height: 80px; /* 必要なら調整 */
+  height: var(--header-height);
 }
 
 .footer {
-  height: 80px;
+  height: var(--footer-height);
 }
 
 /* アプリ部分（中央の白いカード） */
 .main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - var(--header-height) - var(--footer-height));
+  height: calc(100vh - var(--header-height) - var(--footer-height));
   padding: 0;
 }
 
@@ -42,7 +56,8 @@
 .app-container {
   width: 100%;
   max-width: 480px;
-  min-height: 640px;
+  height: 100%;
+  max-height: 100%;
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -55,6 +70,7 @@
 
   overflow: hidden;        /* ← はみ出し防止 */
   text-align: center;      /* ← テキスト中央寄せ */
+  box-sizing: border-box;
 }
 
 /* ===== 動画スタイル ===== */
@@ -78,22 +94,57 @@
 }
 
 /* ===== OS別スタイル ===== */
-/* Android 専用 */
+.android {
+  --header-height: 20px;
+  --footer-height: 20px;
+}
 .android .app-container {
   max-width: 350px;
-  min-height: 550px;
+}
+.android.screen-small .app-container {
+  max-width: 320px;
+}
+.android.screen-medium .app-container {
+  max-width: 400px;
+}
+.android.screen-large .app-container {
+  max-width: 450px;
 }
 
 /* iOS 専用 */
+.ios {
+  --header-height: 20px;
+  --footer-height: 20px;
+}
 .ios .app-container {
   max-width: 350px;
-  min-height: 550px;
+}
+.ios.screen-small .app-container {
+  max-width: 330px;
+}
+.ios.screen-medium .app-container {
+  max-width: 420px;
+}
+.ios.screen-large .app-container {
+  max-width: 460px;
 }
 
 /* PC 専用 */
+.desktop {
+  --header-height: 80px;
+  --footer-height: 80px;
+}
 .desktop .app-container {
   max-width: 520px;
-  min-height: 720px;
+}
+.desktop.screen-small .app-container {
+  max-width: 420px;
+}
+.desktop.screen-medium .app-container {
+  max-width: 500px;
+}
+.desktop.screen-large .app-container {
+  max-width: 520px;
 }
 
 /* ===== OS別ヘッダ／フッタ ===== */

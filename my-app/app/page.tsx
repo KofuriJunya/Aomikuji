@@ -9,14 +9,36 @@ export default function App() {
   useEffect(() => {
     const ua = navigator.userAgent;
     let osClass = "desktop";
-    
+
     if (/Android/i.test(ua)) {
       osClass = "android";
     } else if (/iPhone|iPad|iPod/i.test(ua)) {
       osClass = "ios";
     }
-    
-    document.body.classList.add(osClass);
+
+    const body = document.body;
+    body.classList.add(osClass);
+
+    const updateSizeClass = () => {
+      const width = window.innerWidth;
+      body.classList.remove("screen-small", "screen-medium", "screen-large");
+
+      if (width < 768) {
+        body.classList.add("screen-small");
+      } else if (width < 1025) {
+        body.classList.add("screen-medium");
+      } else {
+        body.classList.add("screen-large");
+      }
+    };
+
+    updateSizeClass();
+    window.addEventListener("resize", updateSizeClass);
+
+    return () => {
+      window.removeEventListener("resize", updateSizeClass);
+      body.classList.remove(osClass, "screen-small", "screen-medium", "screen-large");
+    };
   }, []);
 
   function toEmbedUrl(url: string) {
