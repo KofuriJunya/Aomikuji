@@ -29,16 +29,20 @@
 /* コンテンツのラッパー */
 .content-wrapper {
   width: 100%;
-  max-width: 480px; /* ← 中身の幅を広げるポイント */
   margin: 0 auto;
   text-align: center;
 }
 
-/* ===== スマホ対応（767px未満） ===== */
+.content-wrapper .inner-content {
+  width: 100%;
+  text-align: center;
+}
+
+/* ===== 共通初期値 ===== */
 .app-container {
   width: 100%;
-  max-width: 480px;
-  height: 640px;
+  max-width: 520px;
+  max-height: 720px;
   background: white;
   padding: 20px;
   border-radius: 12px;
@@ -51,24 +55,4 @@
 
   overflow: hidden;        /* ← はみ出し防止 */
   text-align: center;      /* ← テキスト中央寄せ */
-}
-
-/* ===== 中サイズデバイス（768px - 1024px） ===== */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .app-container {
-    width: 100%;
-    max-width: 600px;
-    height: 720px;
-    padding: 30px;
-  }
-}
-
-/* ===== 大サイズデバイス（1025px以上） ===== */
-@media (min-width: 1025px) {
-  .app-container {
-    width: 100%;
-    max-width: 800px;
-    height: 800px; 
-    padding: 40px;
-  }
 }
