@@ -46,10 +46,15 @@ body {
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 
 .content-wrapper .inner-content {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -81,7 +86,7 @@ body {
   max-width: 480px;
   height: 270px;
   border-radius: 8px;
-  margin: 20px auto;
+  margin: 40px auto;
   border: none;
 }
 
