@@ -76,12 +76,12 @@ body {
 
 /* ===== 動画スタイル ===== */
 .video-iframe {
+  display: block;
   width: 100%;
   max-width: 480px;
   height: 270px;
   border-radius: 8px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px auto;
   border: none;
 }
 
@@ -102,7 +102,6 @@ body {
 }
 .android .app-container {
   max-width: 350px;
-  padding: calc((var(--max-width) - 320px) / 2);  /* 動画分引いて差分をpadding */
 }
 /* .android.screen-small .app-container {
   max-width: 320px;
@@ -121,7 +120,6 @@ body {
 }
 .ios .app-container {
   max-width: 350px;
-  padding: calc((var(--max-width) - 320px) / 2);  /* 動画分引いて差分をpadding */
 }
 /* .ios.screen-small .app-container {
   max-width: 330px;
@@ -140,7 +138,6 @@ body {
 }
 .desktop .app-container {
   max-width: 540px;
-  padding: calc((var(--max-width) - 480px) / 2);  /* 動画分引いて差分をpadding */
 }
 
 /* ===== OS別ヘッダ／フッタ ===== */
