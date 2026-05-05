@@ -86,7 +86,6 @@ export default function App() {
 
       {page === "animation" && (
         <>
-          <h1>抽選画面</h1>
           <p>抽選中…</p>
         </>
       )}
