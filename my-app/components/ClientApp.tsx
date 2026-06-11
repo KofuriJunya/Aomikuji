@@ -92,11 +92,12 @@ export default function ClientApp() {
 
       {page === "animation" && (
         <>
+          {/* ここに抽選演出を入れる */}
           <p>抽選中…</p>
         </>
       )}
 
-      {page === "result" && result && (
+      {page === "result" && (
         <>
           <div style={{ marginBottom: "20px", display: "flex" }}>
             <button
@@ -117,30 +118,39 @@ export default function ClientApp() {
 
           <h1>今日の運勢</h1>
 
-          <p>本日のラッキーな星座は{result?.constellation}です！</p>
-          <p>{result?.member}の動画を見るとハッピーかも！？</p>
+          {result ? (
+            <>
+              <p>本日のラッキーな星座は{result.constellation}です！</p>
+              <p>{result.member}の動画を見るとハッピーかも！？</p>
 
-          <img
-            src={`/photos/${result?.photo}`}
-            alt={result?.member}
-            style={{
-              width: "200px",
-              borderRadius: "8px",
-              marginTop: "20px",
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
-          />
+              <img
+                src={`/photos/${result.photo}`}
+                alt={result.member}
+                style={{
+                  width: "200px",
+                  borderRadius: "8px",
+                  marginTop: "20px",
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              />
 
-          <iframe
-            className="video-iframe"
-            src={result?.movie ? toEmbedUrl(result.movie) : ""}
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+              <iframe
+                className="video-iframe"
+                src={result.movie ? toEmbedUrl(result.movie) : ""}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </>
+          ) : (
+            <div style={{ padding: "20px", border: "1px solid #eee", borderRadius: "8px", textAlign: "center" }}>
+              <p style={{ color: "#b00", fontWeight: "bold" }}>結果が取得できませんでした。</p>
+              <p>時間を置いて再度お試しください。</p>
+            </div>
+          )}
         </>
       )}
     </>
